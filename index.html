@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharon Wang | Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="Page sections">
+        <button class="tab-button active" type="button" data-tab="intro">Self-introduction</button>
+        <button class="tab-button" type="button" data-tab="data">DATA ABOUT ME</button>
+        <button class="tab-button" type="button" data-tab="with">With ME</button>
+      </header>
+
+      <main>
+        <section class="panel intro-panel active" id="intro" aria-labelledby="intro-title">
+          <div class="intro-copy">
+            <p class="eyebrow">Personal Homepage</p>
+            <h1 id="intro-title">Sharon Wang</h1>
+            <p class="subtitle">哈喽，我是Sharon Wang，2023级英语语言学方向就读。</p>
+
+            <div class="tag-cloud" aria-label="About Sharon tags">
+              <span>加里敦大学物理学院床系在读生</span>
+              <button type="button" data-jump-card="detective">侦探故事探险家</button>
+              <button type="button" data-jump-card="fanwork">同人重度爱好者</button>
+              <button type="button" data-jump-card="travel">旅行收藏家</button>
+              <button type="button" data-jump-card="food">美食打卡家</button>
+            </div>
+
+            <div class="mbti-card">
+              <p class="mbti-label">MBTI：ENTP</p>
+              <p>N、T、P 均在90%以上的骨折眉，很高兴认识你呀！</p>
+            </div>
+          </div>
+
+          <aside class="personality-art" aria-label="ENTP personality image">
+            <img src="assets/entp.png" alt="ENTP 人格插画" />
+          </aside>
+        </section>
+
+        <section class="panel data-panel" id="data" aria-labelledby="data-title">
+          <div class="section-heading">
+            <p class="eyebrow">Details</p>
+            <h2 id="data-title">DATA ABOUT ME</h2>
+          </div>
+
+          <div class="data-grid" id="dataGrid">
+            <article class="info-card" data-card="detective" tabindex="0">
+              <span class="card-index">01</span>
+              <div class="card-copy">
+                <h3>侦探故事探险家</h3>
+                <p class="card-short">推理的终点这不只是真相，还有对人、对世界的理解。</p>
+              </div>
+              <img class="card-image" src="assets/detective.png" alt="推理流派整理图" />
+            </article>
+
+            <article class="info-card" data-card="fanwork" tabindex="0">
+              <span class="card-index">02</span>
+              <div class="card-copy">
+                <h3>同人重度爱好者</h3>
+                <p class="card-short">因为遗憾，所以描绘了新的世界。</p>
+              </div>
+              <img class="card-image" src="assets/fanwork.png" alt="同人关键词词云" />
+            </article>
+
+            <article class="info-card" data-card="travel" tabindex="0">
+              <span class="card-index">03</span>
+              <div class="card-copy">
+                <h3>旅行收藏家</h3>
+                <p class="card-short">我在大地上感受与你们的共鸣。</p>
+              </div>
+              <img class="card-image" src="assets/travel.png" alt="旅行城市地图" />
+            </article>
+
+            <article class="info-card" data-card="food" tabindex="0">
+              <span class="card-index">04</span>
+              <div class="card-copy">
+                <h3>美食打卡家</h3>
+                <p class="card-short">走到哪里吃到哪里~</p>
+              </div>
+              <img class="card-image" src="assets/food.png" alt="中国美食地图" />
+            </article>
+          </div>
+        </section>
+
+        <section class="panel with-panel" id="with" aria-labelledby="with-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Leave Something</p>
+            <h2 id="with-title">With ME</h2>
+          </div>
+
+          <div class="message-stage" id="messageStage" aria-live="polite">
+            <div class="stage-glow"></div>
+          </div>
+
+          <form class="message-form" id="messageForm">
+            <label for="messageInput">想说的话</label>
+            <div class="input-row">
+              <input
+                id="messageInput"
+                type="text"
+                maxlength="60"
+                placeholder="写一句想对 Sharon 说的话..."
+                autocomplete="off"
+                required
+              />
+              <button type="submit">发送留言</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
